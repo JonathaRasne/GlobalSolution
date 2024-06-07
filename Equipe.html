@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fundo preto */
+            color: #fff; /* Texto branco */
+        }
+        .team-member {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #222; /* Fundo do cartão */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .team-member h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .team-member p {
+            margin: 5px 0;
+        }
+        .social-links a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #1e90ff; /* Cor dos links */
+        }
+        .team-member:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="team-member" id="leonardo">
+        <img src="leo01.jpg" alt="Leonardo Faria Salazar">
+        <h2>Leonardo Faria Salazar</h2>
+        <p>RM: 557484</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/lfsalazaar/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="team-member" id="jonatha">
+        <img src="Jonatha03.jpg" alt="Jonatha Matheus Rasne Pereira Fonseca">
+        <h2>Jonatha Matheus Rasne Pereira Fonseca</h2>
+        <p>RM: 558437</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jonatha-rasne-4998a91a0/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="team-member" id="henrique">
+        <img src="henrique02.jpg" alt="Henrique Luis Baesa">
+        <h2>Henrique Luis Baesa</h2>
+        <p>RM: 558977</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/henriquebaesa/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.team-member').forEach(member => {
+            member.addEventListener('mouseover', () => {
+                member.style.transform = 'scale(1.05)';
+                member.style.boxShadow = '0 0 15px rgba(255, 255, 255, 0.3)';
+            });
+            member.addEventListener('mouseout', () => {
+                member.style.transform = 'scale(1)';
+                member.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
+</body>
+</html>

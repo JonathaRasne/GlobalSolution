@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardiões Do Oceano</title>
+    <link rel="stylesheet" href="Style.css">
+    <meta name="description" content="Uma fusão de “ecologia” e “mar”, destacando o compromisso ambiental.">
+</head>
+<body class="using-mouse">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="GIF">
+        <section id="inicio">
+            <img src="logo.png" alt="Logo" class="logo-inicio">
+            <h1>Bem-vindo à Guardiões Do Oceano</h1>
+            <p>Somos uma startup dedicada à preservação dos oceanos e seu ecossistema.</p>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>A Guardiões Do Oceano foi fundada com o objetivo de proteger e preservar os ecossistemas marinhos através de soluções 
+            inovadoras e práticas sustentáveis. Nossa equipe é composta por biólogos marinhos, engenheiros e entusiastas do meio ambiente, todos unidos por uma paixão em comum: garantir um futuro saudável para nossos oceanos.</p>
+        </section>
+
+        <section id="projetos">
+            <h2>Nossos Projetos</h2>
+            <ul>
+                <li>Monitoramento Remoto de Atividades de Pesca</li>
+                <li>Educação Ambiental em Escolas Costeiras</li>
+                <li>Pesca Sustentável em Parceria com Comunidades Locais</li>
+                <li>Campanhas de Limpeza Costeira</li>
+                <li>Pesquisa e Monitoramento de Recifes de Coral</li>
+            </ul>
+        </section>
+    </div>
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Quer saber mais sobre nossos projetos ou se envolver conosco? Entre em contato através do formulário abaixo:</p>
+        <form id="contato-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required="">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required="">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required=""></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <img src="logo.png" alt="Logo">
+            <p>© 2024 Guardiões Do Oceano. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const contatoSection = document.querySelector("#contato");
+
+            contatoSection.addEventListener("mouseenter", () => {
+                contatoSection.classList.add("inspecionar");
+            });
+
+            contatoSection.addEventListener("mouseleave", () => {
+                contatoSection.classList.remove("inspecionar");
+            });
+
+            const form = document.getElementById('contato-form');
+            form.addEventListener('submit', (event) => {
+                event.preventDefault(); // Impede o envio do formulário
+
+                // Exibe a mensagem de agradecimento
+                alert('Seus dados foram armazenados, em breve entraremos em contato. Obrigado pela sua ajuda!');
+
+                // Limpa os campos do formulário
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #ffffff;
+}
+
+header {
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #005fa3;
+    border-radius: 5px;
+}
+
+.GIF {
+    background-image: url('gif01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    padding: 10px;
+    color: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+section:not(:last-of-type) {
+    margin-bottom: 40px;
+}
+
+.logo-inicio {
+    width: 150px; /* Ajuste este valor conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+footer {
+    background-color: #787878;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Estilos específicos para cada seção */
+#inicio {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#sobre {
+    padding: 50px 0;
+}
+
+#projetos {
+    padding: 50px 0;
+}
+
+#contato {
+    background-image: url('gif02.gif');
+   
+}
+
+/* Estilos para formulário de contato */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    background-color: #004580;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003366;
+}
+
+/* Estilos de animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+.inspecionar {
+    transform: scale(1.1);
+    border: 3px solid rgb(4, 0, 252);
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    nav ul {
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 30px 10px;
+    }
+
+    form {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+    }
+}
